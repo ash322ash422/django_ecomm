@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #'django.contrib.sites',
+    #'django.contrib.sites', #I am commenting this to make .../admin/ page work.
     
     'allauth',
     'allauth.account',

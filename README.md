@@ -41,6 +41,11 @@ Now we get  django-debug-toolbar-4.3.o working:
 2) In urls.py change 'urlpatterns'.
 3) run 'python manage.py collectstatic' command
 
+**********************************
+NOTE: At one point I rececieved following error:
+django.db.migrations.exceptions.InconsistentMigrationHistory: Migration socialaccount.0001_initial is applied before its dependency sites.0001_initial on database 'default'.
+Solution: delete all tables and then run 'python.exe .\manage.py makemigrations' and 
+then ' python.exe .\manage.py migrate   '
 
 
 
