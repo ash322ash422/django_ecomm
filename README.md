@@ -42,11 +42,19 @@ Now we get  django-debug-toolbar-4.3.o working:
 3) run 'python manage.py collectstatic' command
 
 **********************************
-NOTE: At one point I rececieved following error:
+ISSUE: At one point I received following error:
 django.db.migrations.exceptions.InconsistentMigrationHistory: Migration socialaccount.0001_initial is applied before its dependency sites.0001_initial on database 'default'.
 Solution: delete all tables and then run 'python.exe .\manage.py makemigrations' and 
 then ' python.exe .\manage.py migrate   '
+************************************
 
+Now we get django-crispy-forms:
+1) Add 'django-crispy-forms==1.14.0' in requirements.txt and run 'python -m pip install -r .\requirements.txt'
+2) in settings/base.py, add 'crispy_forms' to INSTALLED_APPS, add CRISPY_TEMPLATE_PACK = 'bootstrap4'
+3) In templates/account/{signup.html,etc}, invoke above by using  {% load crispy_forms_tags %} and append the |crispy filter to your form or formset context variable.
 
+*****************************
+ISSUE: TemplateDoesNotExist at /order-summary/
+order_summary.html
 
-
+solution: Since I just created this html file, so restart the server. 

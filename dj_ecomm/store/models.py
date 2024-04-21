@@ -25,7 +25,7 @@ LABEL_CHOICES = ( ('P', 'primary'),
 
 ADDRESS_CHOICES = ( ('B', 'Billing'), ('S', 'Shipping'),)
 
-class UserProfile(models.Model):
+class UserProfile(models.Model):# aka StripeCustomer...may not needed if stripe not used
     user = models.OneToOneField( settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     stripe_customer_id = models.CharField(max_length=50, blank=True, null=True)
     one_click_purchasing = models.BooleanField(default=False)

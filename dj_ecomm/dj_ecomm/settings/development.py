@@ -32,13 +32,13 @@ DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.redirects.RedirectsPanel',
     #'debug_toolbar.panels.profiling.ProfilingPanel',
 ]
-# def show_toolbar(request):
-#     return True
-# #end def
-# DEBUG_TOOLBAR_CONFIG = {
-#     'INTERCEPT_REDIRECTS': False,
-#     'SHOW_TOOLBAR_CALLBACK': show_toolbar #call the function defined above
-# }
+def show_toolbar(request):
+    return True
+#end def
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+    'SHOW_TOOLBAR_CALLBACK': show_toolbar #call the function defined above
+}
 #################################################################
 
 

@@ -6,3 +6,5 @@ django-countries==7.6.1 # #Needed in models.py for CountryField(multiple=False)
 python-decouple==3.8
 django-allauth==0.61.1
 django-debug-toolbar==4.3.0
+#django-crispy-forms==2.0 # for this version  you need to  install crispy-bootstrap4 seperately
+django-crispy-forms==1.14.0 # No need to install crispy-bootstrap4 seperately b/c it get it is part of core packages.

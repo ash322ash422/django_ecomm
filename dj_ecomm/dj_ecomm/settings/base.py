@@ -23,13 +23,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #'django.contrib.sites', #I am commenting this to make .../admin/ page work.
+    #I am commenting this to make .../admin/ page work.
+    'django.contrib.sites', # you also have to SITE_ID = 1. Scroll below.
     
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     
-    #'crispy_forms',
+    'crispy_forms',
     
     #'django_countries',
 
@@ -103,4 +104,9 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend' #TODO: where defined
 )
 
+SITE_ID = 1 ## We have to set this variable if we enable 'django.contrib.sites'
+LOGIN_REDIRECT_URL = '/' #redirect after sign-in, sign-out, login.
 
+# CRISPY FORMS
+# other options: 'uni_form','foundation','tailwind','Bootstrap 5','Bulma'
+CRISPY_TEMPLATE_PACK = 'bootstrap4' 

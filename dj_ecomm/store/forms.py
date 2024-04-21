@@ -36,7 +36,7 @@ class CheckoutForm(forms.Form):
     payment_option = forms.ChoiceField(
         widget=forms.RadioSelect, choices=PAYMENT_CHOICES)
 #end class
-"""
+
 class CouponForm(forms.Form):
     code = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
@@ -46,13 +46,14 @@ class CouponForm(forms.Form):
     }))
 #end class
 
+
 class RefundForm(forms.Form):
     ref_code = forms.CharField()
     message = forms.CharField(widget=forms.Textarea(attrs={ 'rows': 4 }))
     email = forms.EmailField()
 #end class
-
-class PaymentForm(forms.Form):
+"""
+class PaymentForm(forms.Form): #NOT USED ANYWHARE
     stripeToken = forms.CharField(required=False)
     save = forms.BooleanField(required=False)
     use_default = forms.BooleanField(required=False)
