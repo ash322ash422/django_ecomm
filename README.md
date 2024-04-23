@@ -2,6 +2,7 @@
  
 1) Create folder django_ecomm and then open it in VSCode. Choose interp=python3.12.2
 2) create requirements.txt and add 'Django==5.0.4'. Run 'python -m pip install -r .\requirements.txt'.You can verify by 'django-admin --version', it should give 5.0.4
+   NOTE: command 'python -m pip freeze > req1.txt' would create req1.txt file that containes all python  dependencies.
 3) PS C:\Users\hi\Desktop\projects\python_projects\django_ecomm> django-admin startproject dj_ecomm
 4) PS C:\Users\hi\Desktop\projects\python_projects\django_ecomm\dj_ecomm> python .\manage.py startapp store
 *********************************************************************
@@ -58,3 +59,5 @@ ISSUE: TemplateDoesNotExist at /order-summary/
 order_summary.html
 
 solution: Since I just created this html file, so restart the server. 
+***********************************
+
